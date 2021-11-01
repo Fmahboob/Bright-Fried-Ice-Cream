@@ -24,6 +24,10 @@
             android:id="@+id/nav_company_info"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="@string/menu_company_info" />
+        <item
+            android:id="@+id/nav_f_a_q"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:title="@string/menu_f_a_q" />
 
     </group>
 </menu>
