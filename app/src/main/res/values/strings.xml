@@ -14,6 +14,7 @@
     <string name="menu_order">Order</string>
     <string name="menu_contact_info">Contact Info</string>
     <string name="menu_company_info">Company Info</string>
+    <string name="menu_ice_cream">Ice Cream</string>
     <string name="menu_f_a_q">FAQs</string>
     <string name="label_fragment_home">Home</string>
     <string name="label_fragment_flavours">Flavours</string>
@@ -32,5 +33,7 @@ Friday – Sunday: 10:00 am – 11:00 pm
 </string>
     <string name="answer_five">No we do not have other location.</string>
     <string name="answer_six">While we don’t offer delivery through our app or website we are partnered with UberEATS and door dash so orders can be made through there.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
