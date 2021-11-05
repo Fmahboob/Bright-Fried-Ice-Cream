@@ -1,23 +1,31 @@
-package com.example.friedicecream;
+package com.example.friedicecream.RecyclerView;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+
+import com.example.friedicecream.R;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FAQsFragment#newInstance} factory method to
+ * Use the {@link IceCreamFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FAQsFragment extends Fragment {
-    ListView listView;
+public class IceCreamFragment extends Fragment {
+    private ArrayList<Term> terms;
+
+    public IceCreamFragment(ArrayList<Term> terms) {
+        this.terms = terms;
+    }
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +36,7 @@ public class FAQsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FAQsFragment() {
+    public IceCreamFragment() {
         // Required empty public constructor
     }
 
@@ -38,11 +46,11 @@ public class FAQsFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FAQsFragment.
+     * @return A new instance of fragment FlavourFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static FAQsFragment newInstance(String param1, String param2) {
-        FAQsFragment fragment = new FAQsFragment();
+    public static IceCreamFragment newInstance(String param1, String param2) {
+        IceCreamFragment fragment = new IceCreamFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -62,19 +70,22 @@ public class FAQsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_f_a_qs, container, false);
-        listView = view.findViewById(R.id.faqList);
-        ArrayList<FAQs> fAQsList = new ArrayList<>();
-        fAQsList.add(new FAQs(R.drawable.one, R.string.question_one, R.string.answer_one));
-        fAQsList.add(new FAQs(R.drawable.two, R.string.question_two,R.string.answer_two));
-        fAQsList.add(new FAQs(R.drawable.three,R.string.question_three, R.string.answer_three));
-        fAQsList.add(new FAQs(R.drawable.four,R.string.question_four, R.string.answer_four));
-        fAQsList.add(new FAQs(R.drawable.five,R.string.question_five, R.string.answer_five));
-        fAQsList.add(new FAQs(R.drawable.six, R.string.question_six, R.string.answer_six));
+       View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
+        ArrayList<Term> terms = new ArrayList<>();
+        terms.add(new Term(R.drawable.cherry, R.string.cherry_title));
+        terms.add(new Term(R.drawable.kiwi, R.string.kiwi_title));
+        terms.add(new Term(R.drawable.pear, R.string.pear_title));
+        terms.add(new Term(R.drawable.plum, R.string.plum_title));
+        terms.add(new Term(R.drawable.choclate, R.string.chocolate_title));
+        terms.add(new Term(R.drawable.oreo, R.string.cookie_cream_title));
+        RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+       recyclerView.setLayoutManager(
+               new GridLayoutManager(getContext(), 2));
+        recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
 
 
-
-        listView.setAdapter(new CustomListViewAdopter(getContext(), fAQsList));
         return view;
     }
-    }
+}

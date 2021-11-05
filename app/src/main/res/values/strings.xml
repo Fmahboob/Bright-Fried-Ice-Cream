@@ -36,4 +36,14 @@ Friday – Sunday: 10:00 am – 11:00 pm
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="cherry_title">Cherry Flavour</string>
+    <string name="kiwi_title">Kiwi Flavour</string>
+    <string name="pear_title">Pear Flavour</string>
+    <string name="plum_title">Plum Flavour</string>
+    <string name="chocolate_title">Chocolate Flavour</string>
+    <string name="cookie_cream_title">Cookie and Cream</string>
+
+
+
+
 </resources>
