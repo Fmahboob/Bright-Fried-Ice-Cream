@@ -3,6 +3,7 @@ package com.example.friedicecream.RecyclerView;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.friedicecream.R;
 
@@ -72,18 +74,23 @@ public class IceCreamFragment extends Fragment {
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
         ArrayList<Term> terms = new ArrayList<>();
-        terms.add(new Term(R.drawable.cherry, R.string.cherry_title));
-        terms.add(new Term(R.drawable.kiwi, R.string.kiwi_title));
-        terms.add(new Term(R.drawable.pear, R.string.pear_title));
-        terms.add(new Term(R.drawable.plum, R.string.plum_title));
-        terms.add(new Term(R.drawable.choclate, R.string.chocolate_title));
-        terms.add(new Term(R.drawable.oreo, R.string.cookie_cream_title));
+        terms.add(new Term(R.drawable.cherry, "Cherry"));
+        terms.add(new Term(R.drawable.kiwi, "Kiwi"));
+        terms.add(new Term(R.drawable.pear, "Pear"));
+        terms.add(new Term(R.drawable.plum, "Plum"));
+        terms.add(new Term(R.drawable.choclate, "Chocolate"));
+        terms.add(new Term(R.drawable.oreo, "Oreo"));
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
+
+
+
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
        recyclerView.setLayoutManager(
                new GridLayoutManager(getContext(), 2));
         recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
+
+
 
 
         return view;

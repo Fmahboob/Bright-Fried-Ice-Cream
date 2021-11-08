@@ -28,7 +28,9 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recycle_row, parent, false);
         return new CustomViewHolder(view);
+
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
@@ -52,10 +54,14 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
     protected ImageView image_recycler;
     protected TextView name_recycler;
 
+
     public CustomViewHolder(@NonNull View itemView) { //recycle_row
         super(itemView);
+
         this.image_recycler = itemView.findViewById(R.id.image_recycler);
         this.name_recycler = itemView.findViewById(R.id.name_recycler);
+
+
 
     }
 }

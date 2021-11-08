@@ -11,6 +11,7 @@
         android:id="@+id/image_recycler"
         android:layout_width="138dp"
         android:layout_height="159dp"
+        android:layout_gravity="center"
         android:padding="10dp"
         android:paddingEnd="3dp"
         android:textAlignment="center"
@@ -18,12 +19,13 @@
 
     <TextView
         android:id="@+id/name_recycler"
-        android:layout_width="match_parent"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:padding="10dp"
-        android:paddingTop="5dp"
+        android:paddingEnd="3dp"
         android:text="TextView"
-        android:textAlignment="textStart"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
 </LinearLayout>
