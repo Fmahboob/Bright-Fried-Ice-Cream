@@ -44,5 +44,11 @@ Friday – Sunday: 10:00 am – 11:00 pm
     <string name="chocolate_title">Chocolate Flavour</string>
     <string name="cookie_cream_title">Cookie and Cream</string>
 
+    <string name="phone">Phone</string>
+    <string name="email_button">Email</string>
+    <string name="address">Buying Location</string>
+    <string name="facebook">FaceBook</string>
+
+
 
 </resources>
