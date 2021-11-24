@@ -39,4 +39,9 @@
         android:name="com.example.friedicecream.RecyclerView.IceCreamFragment"
         android:label="ice Cream"
         tools:layout="@layout/fragment_ice_cream" />
+    <fragment
+        android:id="@+id/nav_info_icecream"
+        android:name="com.example.friedicecream.ViewPager.InfoFragment"
+        android:label="fragment_nav_info_icecream"
+        tools:layout="@layout/fragment_info_icecream" />
 </navigation>
