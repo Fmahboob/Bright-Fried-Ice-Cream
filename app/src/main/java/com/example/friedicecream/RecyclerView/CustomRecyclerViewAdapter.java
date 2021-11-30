@@ -1,6 +1,7 @@
 package com.example.friedicecream.RecyclerView;
 
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.friedicecream.R;
@@ -35,33 +37,45 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         IceCreamItem iceCreamItem = iceCreamItems.get(position);
-        holder.image_recycler.setImageResource(iceCreamItem.getImageRecycler());
-        holder.name_recycler.setText(iceCreamItem.getNameRecycler());
+        holder.image_recycler.setImageResource(iceCreamItem.getImage());
+        holder.name_recycler.setText(iceCreamItem.getName());
+        holder.name_recycler.setText("$" + String.valueOf(iceCreamItem.getPrice()));
 
     }
 
     @Override
     public int getItemCount() {
-        if(iceCreamItems != null){
+        if (iceCreamItems != null) {
             return iceCreamItems.size();
         }
         return 0;
     }
-}
 
 
-class CustomViewHolder extends RecyclerView.ViewHolder {
-    protected ImageView image_recycler;
-    protected TextView name_recycler;
+    class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        protected ImageView image_iceCream;
+        protected TextView name_iceCream;
 
 
-    public CustomViewHolder(@NonNull View itemView) { //recycle_row
-        super(itemView);
+        public CustomViewHolder(@NonNull View itemView) { //recycle_row
+            super(itemView);
 
-        this.image_recycler = itemView.findViewById(R.id.iceCream_image);
-        this.name_recycler = itemView.findViewById(R.id.iceCream_name);
+            this.image_iceCream = itemView.findViewById(R.id.iceCream_image);
+            this.name_iceCream = itemView.findViewById(R.id.iceCream_name);
 
 
+        }
 
+        @Override
+        public void onClick(View view) {
+            IceCreamItem currentItem = iceCreamItems.get(getAdapterPosition());
+            Bundle bundle = new Bundle();
+            bundle.putInt("DRAWABLE", currentItem.getImage());
+            bundle.putString("NAME", currentItem.getName());
+            bundle.putString("DESCRIPTION", currentItem.getName());
+            Navigation.findNavController(view)
+                    .navigate(R.id.action_nav_menu_to_menuItemDetailed, bundle);
+
+        }
     }
 }

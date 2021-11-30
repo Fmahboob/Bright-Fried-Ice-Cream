@@ -3,29 +3,38 @@ package com.example.friedicecream.RecyclerView;
 import android.widget.ImageView;
 
 public class IceCreamItem {
-    private int imageRecycler;
-    private String nameRecycler;
+    private int image;
+    private String name;
+    private double price;
 
 
-    public IceCreamItem(int imageRecycler, String nameRecycler) {
-        this.imageRecycler = imageRecycler;
-        this.nameRecycler = nameRecycler;
+    public IceCreamItem(int image, String name, double price) {
+        this.image = image;
+        this.name = name;
+        this.price = price;
     }
 
-    public int getImageRecycler() {
-        return imageRecycler;
+    public int getImage() {
+        return image;
     }
 
-    public void setImageRecycler(int imageRecycler) {
-        this.imageRecycler = imageRecycler;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public String getNameRecycler() {
-        return nameRecycler;
+    public String getName() {
+        return name;
     }
 
-    public void setNameRecycler(String nameRecycler) {
-        this.nameRecycler = nameRecycler;
+    public void setName(String name) {
+        this.name = name;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }
