@@ -45,7 +45,7 @@
             app:layout_constraintTop_toBottomOf="@+id/iceCream_image" />
 
         <TextView
-            android:id="@+id/price"
+            android:id="@+id/iceCream_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"

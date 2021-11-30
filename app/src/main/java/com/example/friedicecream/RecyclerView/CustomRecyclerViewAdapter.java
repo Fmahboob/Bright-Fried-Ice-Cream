@@ -17,7 +17,7 @@ import com.example.friedicecream.R;
 
 import java.util.ArrayList;
 
-public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {
+public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecyclerViewAdapter.CustomViewHolder> {
     private ArrayList<IceCreamItem> iceCreamItems;
 
     public CustomRecyclerViewAdapter(ArrayList<IceCreamItem> iceCreamItems) {
@@ -33,15 +33,15 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 
     }
 
-
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
         IceCreamItem iceCreamItem = iceCreamItems.get(position);
-        holder.image_recycler.setImageResource(iceCreamItem.getImage());
-        holder.name_recycler.setText(iceCreamItem.getName());
-        holder.name_recycler.setText("$" + String.valueOf(iceCreamItem.getPrice()));
+            holder.image_iceCream.setImageResource(iceCreamItem.getImage());
+            holder.name_iceCream.setText(iceCreamItem.getName());
+            holder.price_iceCream.setText("$" + String.valueOf(iceCreamItem.getPrice()));
 
     }
+
 
     @Override
     public int getItemCount() {
@@ -55,6 +55,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
     class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         protected ImageView image_iceCream;
         protected TextView name_iceCream;
+        protected TextView price_iceCream;
 
 
         public CustomViewHolder(@NonNull View itemView) { //recycle_row
@@ -62,6 +63,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 
             this.image_iceCream = itemView.findViewById(R.id.iceCream_image);
             this.name_iceCream = itemView.findViewById(R.id.iceCream_name);
+            this.price_iceCream = itemView.findViewById(R.id.iceCream_price);
 
 
         }
@@ -74,7 +76,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
             bundle.putString("NAME", currentItem.getName());
             bundle.putString("DESCRIPTION", currentItem.getName());
             Navigation.findNavController(view)
-                    .navigate(R.id.action_nav_menu_to_menuItemDetailed, bundle);
+                    .navigate(R.id.action_nav_ice_cream_to_iceCreamDetailed, bundle);
 
         }
     }
