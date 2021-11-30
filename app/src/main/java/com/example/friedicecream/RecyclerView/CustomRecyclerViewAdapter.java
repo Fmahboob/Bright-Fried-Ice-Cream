@@ -16,10 +16,10 @@ import com.example.friedicecream.R;
 import java.util.ArrayList;
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHolder> {
-    private ArrayList<Term> terms;
+    private ArrayList<IceCreamItem> iceCreamItems;
 
-    public CustomRecyclerViewAdapter(ArrayList<Term> terms) {
-        this.terms = terms;
+    public CustomRecyclerViewAdapter(ArrayList<IceCreamItem> iceCreamItems) {
+        this.iceCreamItems = iceCreamItems;
     }
 
     @NonNull
@@ -34,16 +34,16 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomViewHo
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-        Term term = terms.get(position);
-        holder.image_recycler.setImageResource(term.getImageRecycler());
-        holder.name_recycler.setText(term.getNameRecycler());
+        IceCreamItem iceCreamItem = iceCreamItems.get(position);
+        holder.image_recycler.setImageResource(iceCreamItem.getImageRecycler());
+        holder.name_recycler.setText(iceCreamItem.getNameRecycler());
 
     }
 
     @Override
     public int getItemCount() {
-        if(terms != null){
-            return terms.size();
+        if(iceCreamItems != null){
+            return iceCreamItems.size();
         }
         return 0;
     }
