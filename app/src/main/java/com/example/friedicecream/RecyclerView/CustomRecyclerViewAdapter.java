@@ -58,8 +58,8 @@ class CustomViewHolder extends RecyclerView.ViewHolder {
     public CustomViewHolder(@NonNull View itemView) { //recycle_row
         super(itemView);
 
-        this.image_recycler = itemView.findViewById(R.id.image_recycler);
-        this.name_recycler = itemView.findViewById(R.id.name_recycler);
+        this.image_recycler = itemView.findViewById(R.id.iceCream_image);
+        this.name_recycler = itemView.findViewById(R.id.iceCream_name);
 
 
 
