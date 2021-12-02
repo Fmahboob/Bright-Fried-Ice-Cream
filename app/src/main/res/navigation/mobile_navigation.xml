@@ -10,11 +10,6 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
     <fragment
-        android:id="@+id/nav_flavours"
-        android:name="com.example.friedicecream.FlavoursFragment"
-        android:label="@string/menu_flavours"
-        tools:layout="@layout/fragment_flavours" />
-    <fragment
         android:id="@+id/nav_order"
         android:name="com.example.friedicecream.OrderFragment"
         android:label="@string/menu_order"
@@ -38,5 +33,19 @@
         android:id="@+id/nav_ice_cream"
         android:name="com.example.friedicecream.RecyclerView.IceCreamFragment"
         android:label="ice Cream"
-        tools:layout="@layout/fragment_ice_cream" />
+        tools:layout="@layout/fragment_ice_cream" >
+        <action
+            android:id="@+id/action_nav_ice_cream_to_iceCreamDetailed"
+            app:destination="@id/iceCreamDetailed" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_info_icecream"
+        android:name="com.example.friedicecream.ViewPager.InfoFragment"
+        android:label="fragment_nav_info_icecream"
+        tools:layout="@layout/fragment_info_icecream" />
+    <fragment
+        android:id="@+id/iceCreamDetailed"
+        android:name="com.example.friedicecream.iceCreamDetailed"
+        android:label="fragment_ice_cream_detailed"
+        tools:layout="@layout/fragment_ice_cream_detailed" />
 </navigation>

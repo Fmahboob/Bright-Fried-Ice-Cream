@@ -23,9 +23,9 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class IceCreamFragment extends Fragment {
-    private ArrayList<Term> iceCreamItems;
+    private ArrayList<IceCreamItem> iceCreamItems;
 
-    public IceCreamFragment(ArrayList<Term> iceCreamItems) {
+    public IceCreamFragment(ArrayList<IceCreamItem> iceCreamItems) {
         this.iceCreamItems = iceCreamItems;
     }
 
@@ -73,8 +73,14 @@ public class IceCreamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
-        ArrayList<Term> iceCreamItems = new ArrayList<>();
 
+        ArrayList<IceCreamItem> iceCreamItems = new ArrayList<>();
+        iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 2.99));
+        iceCreamItems.add(new IceCreamItem(R.drawable.kiwi, "Kiwi", 3.99));
+        iceCreamItems.add(new IceCreamItem(R.drawable.pear, "Pear", 2.99));
+        iceCreamItems.add(new IceCreamItem(R.drawable.plum, "Plum", 2.99));
+        iceCreamItems.add(new IceCreamItem(R.drawable.choclate, "Chocolate", 2.99));
+        iceCreamItems.add(new IceCreamItem(R.drawable.oreo, "Oreo", 2.99));
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
 
 
