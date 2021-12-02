@@ -73,6 +73,7 @@ public class IceCreamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
+
         ArrayList<IceCreamItem> iceCreamItems = new ArrayList<>();
         iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 2.99));
         iceCreamItems.add(new IceCreamItem(R.drawable.kiwi, "Kiwi", 3.99));
@@ -81,6 +82,8 @@ public class IceCreamFragment extends Fragment {
         iceCreamItems.add(new IceCreamItem(R.drawable.choclate, "Chocolate", 2.99));
         iceCreamItems.add(new IceCreamItem(R.drawable.oreo, "Oreo", 2.99));
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
+
+
 
 
 
