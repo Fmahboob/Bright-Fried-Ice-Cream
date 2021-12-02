@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/drawable/ic_baseline_question_answer_24.xml" value="0.2703125" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/activity_main.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/app_bar_main.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/content_main.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/custom_listview_item.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_company_info.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_contact.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_f_a_qs.xml" value="0.20380434782608695" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_flavours.xml" value="0.21467391304347827" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_home.xml" value="0.2296195652173913" />
         <entry key="..\:/Users/Farina/AndroidStudioProjects/FriedIceCream/app/src/main/res/layout/fragment_order.xml" value="0.21467391304347827" />
