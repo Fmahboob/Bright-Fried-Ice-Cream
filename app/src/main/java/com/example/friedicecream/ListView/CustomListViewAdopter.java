@@ -1,4 +1,4 @@
-package com.example.friedicecream;
+package com.example.friedicecream.ListView;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+
+import com.example.friedicecream.R;
+
 import java.util.ArrayList;
 
 public class CustomListViewAdopter extends ArrayAdapter<FAQs> {

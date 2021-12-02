@@ -13,8 +13,7 @@
             android:id="@+id/dataimage"
             android:layout_width="58dp"
             android:layout_height="61dp"
-            android:padding="10dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:padding="10dp" />
 
         <TextView
             android:id="@+id/question"

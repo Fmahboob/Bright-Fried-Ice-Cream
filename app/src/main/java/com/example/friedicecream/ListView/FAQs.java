@@ -1,4 +1,4 @@
-package com.example.friedicecream;
+package com.example.friedicecream.ListView;
 
 public class FAQs {
     private int image;
