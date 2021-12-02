@@ -23,10 +23,10 @@ import java.util.ArrayList;
  * create an instance of this fragment.
  */
 public class IceCreamFragment extends Fragment {
-    private ArrayList<Term> terms;
+    private ArrayList<Term> iceCreamItems;
 
-    public IceCreamFragment(ArrayList<Term> terms) {
-        this.terms = terms;
+    public IceCreamFragment(ArrayList<Term> iceCreamItems) {
+        this.iceCreamItems = iceCreamItems;
     }
 
     // TODO: Rename parameter arguments, choose names that match
@@ -73,14 +73,11 @@ public class IceCreamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
-        ArrayList<Term> terms = new ArrayList<>();
-        terms.add(new Term(R.drawable.cherry, "Cherry"));
-        terms.add(new Term(R.drawable.kiwi, "Kiwi"));
-        terms.add(new Term(R.drawable.pear, "Pear"));
-        terms.add(new Term(R.drawable.plum, "Plum"));
-        terms.add(new Term(R.drawable.choclate, "Chocolate"));
-        terms.add(new Term(R.drawable.oreo, "Oreo"));
+        ArrayList<Term> iceCreamItems = new ArrayList<>();
+
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
+
+
 
 
 
@@ -88,7 +85,7 @@ public class IceCreamFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
        recyclerView.setLayoutManager(
                new GridLayoutManager(getContext(), 2));
-        recyclerView.setAdapter(new CustomRecyclerViewAdapter(terms));
+        recyclerView.setAdapter(new CustomRecyclerViewAdapter(iceCreamItems));
 
 
 

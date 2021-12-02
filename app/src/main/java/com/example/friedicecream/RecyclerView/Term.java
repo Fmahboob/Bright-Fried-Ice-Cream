@@ -2,7 +2,7 @@ package com.example.friedicecream.RecyclerView;
 
 import android.widget.ImageView;
 
-public class Term {
+public class Term{
     private int imageRecycler;
     private String nameRecycler;
     private String name2Recycler;
