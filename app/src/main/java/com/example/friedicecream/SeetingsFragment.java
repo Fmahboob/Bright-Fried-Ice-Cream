@@ -1,0 +1,15 @@
+package com.example.friedicecream;
+
+import android.os.Bundle;
+
+import androidx.preference.PreferenceFragmentCompat;
+
+
+
+public class SeetingsFragment extends PreferenceFragmentCompat {
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        setPreferencesFromResource(R.xml.preferences, rootKey);
+    }
+}
