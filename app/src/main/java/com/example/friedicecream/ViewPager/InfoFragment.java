@@ -2,6 +2,8 @@ package com.example.friedicecream.ViewPager;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -11,6 +13,8 @@ import android.view.ViewGroup;
 
 import com.example.friedicecream.R;
 import com.example.friedicecream.RecyclerView.CustomRecyclerViewAdapter;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,5 +78,13 @@ public class InfoFragment extends Fragment {
        viewPager2.setAdapter(new CustomViewPageAdopter(getActivity()));
 
         return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        TabLayout tabLayout = view.findViewById(R.id.tabLayout);
+        new TabLayoutMediator(tabLayout, viewPager2, (tab, position) ->
+                tab.setText(""+(position + 1))).attach();
     }
 }
