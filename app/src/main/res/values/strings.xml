@@ -2,8 +2,8 @@
     <string name="app_name">FriedIceCream</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Bright Fried Ice Cream</string>
+    <string name="nav_header_subtitle">www.brightfriedicecream.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -48,6 +48,7 @@ Friday – Sunday: 10:00 am – 11:00 pm
     <string name="email_button">Email</string>
     <string name="address">Address</string>
     <string name="facebook">FaceBook</string>
+    <string name="search">Search</string>
     <string name="shop_name">Bright Fried IceCream</string>
 
 </resources>

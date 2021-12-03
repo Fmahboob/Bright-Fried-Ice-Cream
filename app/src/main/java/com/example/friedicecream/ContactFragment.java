@@ -63,7 +63,7 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
-// Phone Button
+        // Phone Button
         Button callButton = view.findViewById(R.id.callButton);
         callButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +73,52 @@ public class ContactFragment extends Fragment {
             }
         });
 
-        
+
+        //Email Button
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String EmailAddress[] = {"ummibrahim227@gmail.com"};
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, EmailAddress);
+                startActivity(intent);
+            }
+        });
+
+
+        //Address Button
+        Button addressButton = view.findViewById(R.id.addressButton);
+        addressButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri location = Uri.parse("geo:42.248594597585544, -83.02032341285967?&q=Diet+Center");
+                Intent intent = new Intent(Intent.ACTION_VIEW, location);
+                startActivity(intent);
+            }
+        });
+
+        //Web Intent
+        Button faceBookButton = view.findViewById(R.id.faceBook);
+        faceBookButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse("https://www.facebook.com/"));
+                startActivity(intent);
+            }
+        });
+
+        Button searchButton = view.findViewById(R.id.searchButton);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Intent.ACTION_SEARCH);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }
