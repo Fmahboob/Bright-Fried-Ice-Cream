@@ -50,7 +50,7 @@
         tools:layout="@layout/fragment_ice_cream_detailed" />
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.example.friedicecream.SeetingsFragment"
+        android:name="com.example.friedicecream.SettingsFragment"
         android:label="fragment_seetings"
         tools:layout="@layout/fragment_seetings" />
 </navigation>

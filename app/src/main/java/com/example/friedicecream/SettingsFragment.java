@@ -6,7 +6,7 @@ import androidx.preference.PreferenceFragmentCompat;
 
 
 
-public class SeetingsFragment extends PreferenceFragmentCompat {
+public class SettingsFragment extends PreferenceFragmentCompat {
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
