@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
+import android.view.animation.ScaleAnimation;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +64,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
+        TextView shopName = view.findViewById(R.id.shopName);
+        RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(getContext(),R.anim.anim_shop_name);
+
+
+        shopName.startAnimation(rotateAnimation);
+
+
+        ImageView homeImage = view.findViewById(R.id.homeImage);
+        ScaleAnimation scaleAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(getContext(),R.anim.anim_image);
+
+        homeImage.startAnimation(scaleAnimation);
+
+
+
+        return view;
     }
 }

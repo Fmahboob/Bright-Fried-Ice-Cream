@@ -47,10 +47,14 @@
         android:id="@+id/iceCreamDetailed"
         android:name="com.example.friedicecream.iceCreamDetailed"
         android:label="fragment_ice_cream_detailed"
-        tools:layout="@layout/fragment_ice_cream_detailed" />
+        tools:layout="@layout/fragment_ice_cream_detailed"
+        app:enterAnim="@anim/anim_in"
+        app:exitAnim="@anim/anim_out"
+        app:popEnterAnim="@anim/anim_back_in"
+        app:popExitAnim="@anim/anim_back_out"/>
+        />
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.friedicecream.SettingsFragment"
-        android:label="fragment_seetings"
-        tools:layout="@layout/fragment_seetings" />
+        android:label="fragment_seetings" />
 </navigation>
