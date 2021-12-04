@@ -93,7 +93,7 @@ public class ContactFragment extends Fragment {
         addressButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri location = Uri.parse("geo:42.248594597585544, -83.02032341285967?&q=Diet+Center");
+                Uri location = Uri.parse("geo:42.248594597585544, -83.02032341285967?&q=Bright+Fried+ice+Cream");
                 Intent intent = new Intent(Intent.ACTION_VIEW, location);
                 startActivity(intent);
             }
