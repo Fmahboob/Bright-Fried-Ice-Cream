@@ -13,9 +13,6 @@ public class FAQs {
 
     }
 
-
-
-
     public int getImage() {
         return image;
     }
