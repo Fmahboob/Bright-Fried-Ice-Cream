@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currency_menu">
+        <item>$US</item>
+        <item>$CAD</item>
+    </string-array>
+    <string-array name="currency_value">
+        <item>$70-$230 \n $50/night \n $20 \n $35 \n $30 \n $20 \n $10</item>
+        <item>$80-$250 \n $60/night \n $30 \n $40 \n $40 \n $30 \n $15</item>
+    </string-array>
+</resources>

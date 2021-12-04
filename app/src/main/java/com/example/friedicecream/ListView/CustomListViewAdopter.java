@@ -38,16 +38,16 @@ public class CustomListViewAdopter extends ArrayAdapter<FAQs> {
         ImageView image = convertView.findViewById(R.id.dataimage);
         image.setImageResource(getItem(position).getImage());
 
-//        question.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                answer.setVisibility(answer.getVisibility()
-//                        == View.GONE ? View.VISIBLE : View.GONE);
-//                image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
-//
-//
-//            }
-//        });
+        question.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                answer.setVisibility(answer.getVisibility()
+                        == View.GONE ? View.VISIBLE : View.GONE);
+                image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+
+
+            }
+        });
 
 
         return convertView;
