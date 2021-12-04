@@ -10,6 +10,11 @@
             android:title="@string/menu_home" />
 
         <item
+            android:id="@+id/nav_info_icecream"
+            android:icon="@drawable/ic_baseline_icecream_24"
+            android:title="@string/menu_viewpager" />
+
+        <item
             android:id="@+id/nav_order"
             android:icon="@drawable/ic_baseline_storefront_24"
             android:title="@string/menu_order" />
@@ -21,6 +26,9 @@
             android:id="@+id/nav_company_info"
             android:icon="@drawable/ic_baseline_info_24"
             android:title="@string/menu_company_info" />
+
+
+
         <item
             android:id="@+id/nav_f_a_q"
             android:icon="@drawable/ic_baseline_question_answer_24"
@@ -29,7 +37,7 @@
         <item
             android:id="@+id/nav_ice_cream"
             android:icon="@drawable/ic_baseline_icecream_24"
-            android:title="@string/menu_ice_cream" />
+            android:title="@string/label_fragment_flavours" />
 
 
 

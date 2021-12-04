@@ -50,5 +50,6 @@ Friday – Sunday: 10:00 am – 11:00 pm
     <string name="facebook">FaceBook</string>
     <string name="search">Search</string>
     <string name="shop_name">Bright Fried IceCream</string>
+    <string name="menu_viewpager">viewpager</string>
 
 </resources>
