@@ -1,18 +1,23 @@
 package com.example.friedicecream.RecyclerView;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.friedicecream.CartListView.Cart;
 import com.example.friedicecream.R;
 
 import java.util.ArrayList;
@@ -40,6 +45,19 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             holder.name_iceCream.setText(iceCreamItem.getName());
             holder.price_iceCream.setText("$" + String.valueOf(iceCreamItem.getPrice()));
 
+            holder.cart_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Cart.getInstance().getCartItems().add(iceCreamItem);
+                    Navigation.findNavController(view).navigate(R.id.cartList);
+
+
+
+
+
+                }
+            });
+
     }
 
 
@@ -56,6 +74,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         protected ImageView image_iceCream;
         protected TextView name_iceCream;
         protected TextView price_iceCream;
+        protected Button cart_button;
 
 
         public CustomViewHolder(@NonNull View itemView) { //recycle_row
@@ -64,6 +83,9 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             this.image_iceCream = itemView.findViewById(R.id.iceCream_image);
             this.name_iceCream = itemView.findViewById(R.id.iceCream_name);
             this.price_iceCream = itemView.findViewById(R.id.iceCream_price);
+            this.cart_button = itemView.findViewById(R.id.addToCartButton);
+            itemView.setOnClickListener(this);
+
 
 
         }

@@ -7,8 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.friedicecream.CartListView.Cart;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -64,11 +67,12 @@ public class iceCreamDetailed extends Fragment {
         Bundle extras = getArguments();
         if(extras != null){
             ImageView iceCreamImage = view.findViewById(R.id.iceCreamImage);
-            iceCreamImage.setImageResource(extras.getInt("Drawable"));
+            iceCreamImage.setImageResource(extras.getInt("DRAWABLE"));
             TextView iceCreamName = view.findViewById(R.id.iceCreamName);
-            iceCreamName.setText(extras.getString("Name"));
+            iceCreamName.setText(extras.getString("NAME"));
 
         }
+
 
         return view;
     }

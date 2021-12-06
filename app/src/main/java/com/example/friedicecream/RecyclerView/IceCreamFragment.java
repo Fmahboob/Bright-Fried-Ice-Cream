@@ -84,10 +84,6 @@ public class IceCreamFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
 
 
-
-
-
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
        recyclerView.setLayoutManager(
                new GridLayoutManager(getContext(), 2));

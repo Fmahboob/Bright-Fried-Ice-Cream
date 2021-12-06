@@ -35,7 +35,16 @@
         android:label="ice Cream"
         tools:layout="@layout/fragment_ice_cream" >
         <action
+            android:id="@+id/action_nav_ice_cream_to_nav_cart"
+            app:destination="@id/nav_cart" />
+        <action
             android:id="@+id/action_nav_ice_cream_to_iceCreamDetailed"
+            app:destination="@id/iceCreamDetailed" />
+        <action
+            android:id="@+id/action_nav_ice_cream_to_iceCreamDetailed2"
+            app:destination="@id/iceCreamDetailed" />
+        <action
+            android:id="@+id/action_nav_ice_cream_to_iceCreamDetailed3"
             app:destination="@id/iceCreamDetailed" />
     </fragment>
     <fragment
@@ -57,4 +66,9 @@
         android:id="@+id/nav_settings"
         android:name="com.example.friedicecream.SettingsFragment"
         android:label="fragment_seetings" />
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.example.friedicecream.CartListView.CartFragment"
+        android:label="fragment_nav_cart"
+        tools:layout="@layout/fragment_nav_cart" />
 </navigation>
