@@ -17,15 +17,19 @@ public class CustomViewPageAdopter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position) {
             case 0:
-                return FactFragment.newInstance("Cherry Rolled Ice Cream:", R.drawable.cherry, "Rolled ice cream filled with delicious pieces of fresh cherries.");
+                return FactFragment.newInstance(R.string.cherry_title, R.drawable.cherry, R.string.cherry_desc);
             case 1:
-                return FactFragment.newInstance("Kiwi Rolled Ice Cream:d", R.drawable.kiwi, "Rolled Ice Cream filled with fine cut pieces of kiwi, topped with chocolate syrup.");
-            case 2: return FactFragment.newInstance("Pear Rolled Ice Cream:", R.drawable.pear, "Vanilla flavoured ice cream filled with finely cut pieces of savory pears");
-            case 3: return FactFragment.newInstance("Plum Rolled Ice Cream: ", R.drawable.plum, "Rolled ice cream filled with exquisite pieces of sweet plums");
+                return FactFragment.newInstance(R.string.kiwi_title, R.drawable.kiwi, R.string.kiwi_desc);
+            case 2:
+                return FactFragment.newInstance(R.string.chocolate_title, R.drawable.choclate, R.string.chocolate_desc);
+            case 3:
+                return FactFragment.newInstance(R.string.plum_title, R.drawable.plum, R.string.plum_desc);
+          case 4:
+              return FactFragment.newInstance(R.string.cookie_cream_title, R.drawable.oreo, R.string.cookie_cream_desc);
+            case 5:
+              return FactFragment.newInstance(R.string.pear_title, R.drawable.pear, R.string.pear_desc);
 
-          case 4: return FactFragment.newInstance("Oreo Rolled Ice Cream:", R.drawable.oreo, "Vanilla flavoured ice cream topped with chunks of oreos and chocolate syrup, with one final piece of oreo at the top.");
-
-            default: return FactFragment.newInstance("404: Fragment not found", 21, "");
+            default: return FactFragment.newInstance(0,0,0);
         }
     }
 

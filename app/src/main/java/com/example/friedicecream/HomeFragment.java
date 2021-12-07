@@ -76,8 +76,8 @@ public class HomeFragment extends Fragment {
 
         TextView shopName = view.findViewById(R.id.shopName);
         RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_shop_name);
-        String colorvalue = sharedPreferences.getString("Color_menu", "#000000");
-        int color = Color.parseColor(colorvalue);
+        String colorValue = sharedPreferences.getString("Color_menu", "#000000");
+        int color = Color.parseColor(colorValue);
 
 
         shopName.setTextColor(color);

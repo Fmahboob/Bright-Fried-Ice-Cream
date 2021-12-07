@@ -70,7 +70,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     }
 
 
-    class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class CustomViewHolder extends RecyclerView.ViewHolder {
         protected ImageView image_iceCream;
         protected TextView name_iceCream;
         protected TextView price_iceCream;
@@ -84,22 +84,9 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             this.name_iceCream = itemView.findViewById(R.id.iceCream_name);
             this.price_iceCream = itemView.findViewById(R.id.iceCream_price);
             this.cart_button = itemView.findViewById(R.id.addToCartButton);
-            itemView.setOnClickListener(this);
-
 
 
         }
 
-        @Override
-        public void onClick(View view) {
-            IceCreamItem currentItem = iceCreamItems.get(getAdapterPosition());
-            Bundle bundle = new Bundle();
-            bundle.putInt("DRAWABLE", currentItem.getImage());
-            bundle.putString("NAME", currentItem.getName());
-            bundle.putString("DESCRIPTION", currentItem.getName());
-            Navigation.findNavController(view)
-                    .navigate(R.id.action_nav_ice_cream_to_iceCreamDetailed, bundle);
-
-        }
     }
 }

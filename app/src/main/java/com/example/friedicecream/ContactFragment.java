@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,7 +70,11 @@ public class ContactFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:5191234567"));
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -83,7 +88,11 @@ public class ContactFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, EmailAddress);
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -95,7 +104,12 @@ public class ContactFragment extends Fragment {
             public void onClick(View view) {
                 Uri location = Uri.parse("geo:42.248594597585544, -83.02032341285967?&q=Bright+Fried+ice+Cream");
                 Intent intent = new Intent(Intent.ACTION_VIEW, location);
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -106,7 +120,12 @@ public class ContactFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("https://www.facebook.com/"));
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -116,7 +135,12 @@ public class ContactFragment extends Fragment {
             public void onClick(View view) {
 
                 Intent intent = new Intent(Intent.ACTION_SEARCH);
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
