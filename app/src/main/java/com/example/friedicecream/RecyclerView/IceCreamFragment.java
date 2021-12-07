@@ -85,8 +85,8 @@ public class IceCreamFragment extends Fragment {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-       recyclerView.setLayoutManager(
-               new GridLayoutManager(getContext(), 2));
+//       recyclerView.setLayoutManager(
+//               new GridLayoutManager(getContext(), 2));
         recyclerView.setAdapter(new CustomRecyclerViewAdapter(iceCreamItems));
 
 

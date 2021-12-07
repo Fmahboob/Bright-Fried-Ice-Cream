@@ -142,5 +142,6 @@ Proteins: 1.2 g\n
     <string name="references">References</string>
     <string name="references_website">https://pixabay.com\n
         https://commons.wikimedia.org</string>
+    <string name="add_cart_button">Add To Cart</string>
 
 </resources>

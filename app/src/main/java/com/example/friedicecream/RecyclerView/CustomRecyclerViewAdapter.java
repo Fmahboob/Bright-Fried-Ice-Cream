@@ -49,7 +49,7 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
                 @Override
                 public void onClick(View view) {
                     Cart.getInstance().getCartItems().add(iceCreamItem);
-                    Navigation.findNavController(view).navigate(R.id.cartList);
+                   // Navigation.findNavController(view).navigate(R.id.cartList);
 
 
 
