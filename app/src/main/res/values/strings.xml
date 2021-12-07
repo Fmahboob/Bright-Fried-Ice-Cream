@@ -132,5 +132,15 @@ Proteins: 1.2 g\n
     <string name="shop_name">Bright Fried IceCream</string>
     <string name="menu_viewpager">viewpager</string>
     <string name="placeholder">flavour</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_fragment_credit">Credit</string>
+    <string name="author">Author</string>
+    <string name="author_name">Farina Mahboob</string>
+    <string name="thanks">Thanks to</string>
+    <string name="thanks_name">Cai Filiault</string>
+    <string name="references">References</string>
+    <string name="references_website">https://pixabay.com\n
+        https://commons.wikimedia.org</string>
 
 </resources>
