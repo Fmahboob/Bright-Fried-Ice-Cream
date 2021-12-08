@@ -2,15 +2,20 @@ package com.example.friedicecream;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,12 +74,18 @@ public class ContactFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:5191234567"));
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
 
         //Email Button
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String name = sharedPreferences.getString("name", "");
         Button emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +94,13 @@ public class ContactFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, EmailAddress);
-                startActivity(intent);
+                intent.putExtra(Intent.EXTRA_TITLE, "Hello" + name);
+                intent.putExtra(Intent.EXTRA_TEXT, "Thanks for your Contact we will contact you shortly");
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -95,7 +112,12 @@ public class ContactFragment extends Fragment {
             public void onClick(View view) {
                 Uri location = Uri.parse("geo:42.248594597585544, -83.02032341285967?&q=Bright+Fried+ice+Cream");
                 Intent intent = new Intent(Intent.ACTION_VIEW, location);
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
 
@@ -106,19 +128,54 @@ public class ContactFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
                         Uri.parse("https://www.facebook.com/"));
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
+            }
+        });
+        //Share Button
+
+        Button shareButton = view.findViewById(R.id.shareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT,"Want to eat delicious Fried Ice Cream");
+                try {
+                    startActivity(Intent.createChooser(intent, "Share via"));
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
+
             }
         });
 
+        //Search Button
         Button searchButton = view.findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 Intent intent = new Intent(Intent.ACTION_SEARCH);
-                startActivity(intent);
+                try{
+                    startActivity(intent);
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
             }
         });
+
+        Animation anim_out = AnimationUtils.loadAnimation(getContext(), R.anim.anim_out);
+
+        view.startAnimation(anim_out);
+
 
         return view;
     }

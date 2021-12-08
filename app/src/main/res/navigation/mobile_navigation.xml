@@ -20,11 +20,6 @@
         android:label="@string/menu_contact_info"
         tools:layout="@layout/fragment_contact" />
     <fragment
-        android:id="@+id/nav_company_info"
-        android:name="com.example.friedicecream.CompanyInfoFragment"
-        android:label="@string/menu_company_info"
-        tools:layout="@layout/fragment_company_info" />
-    <fragment
         android:id="@+id/nav_f_a_q"
         android:name="com.example.friedicecream.ListView.FAQsFragment"
         android:label="@string/menu_f_a_q"
@@ -35,26 +30,30 @@
         android:label="ice Cream"
         tools:layout="@layout/fragment_ice_cream" >
         <action
-            android:id="@+id/action_nav_ice_cream_to_iceCreamDetailed"
-            app:destination="@id/iceCreamDetailed" />
+            android:id="@+id/action_nav_ice_cream_to_nav_cart"
+            app:destination="@id/nav_cart" />
     </fragment>
     <fragment
         android:id="@+id/nav_info_icecream"
         android:name="com.example.friedicecream.ViewPager.InfoFragment"
-        android:label="fragment_nav_info_icecream"
-        tools:layout="@layout/fragment_info_icecream" />
+        android:label="Ice Cream Flavours"
+        tools:layout="@layout/fragment_info_icecream" /><![CDATA[
+    />
+
+    ]]>
     <fragment
-        android:id="@+id/iceCreamDetailed"
-        android:name="com.example.friedicecream.iceCreamDetailed"
-        android:label="fragment_ice_cream_detailed"
-        tools:layout="@layout/fragment_ice_cream_detailed"
-        app:enterAnim="@anim/anim_in"
-        app:exitAnim="@anim/anim_out"
-        app:popEnterAnim="@anim/anim_back_in"
-        app:popExitAnim="@anim/anim_back_out"/>
-        />
+        android:id="@+id/nav_cart"
+        android:name="com.example.friedicecream.CartListView.CartFragment"
+        android:label="fragment_nav_cart"
+        tools:layout="@layout/fragment_nav_cart" />
+    <fragment
+        android:id="@+id/nav_credit"
+        android:name="com.example.friedicecream.nav_credit"
+        android:label="Credit"
+        tools:layout="@layout/fragment_nav_credit" />
     <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.friedicecream.SettingsFragment"
-        android:label="fragment_seetings" />
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

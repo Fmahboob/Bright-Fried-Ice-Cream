@@ -1,12 +1,14 @@
 package com.example.friedicecream;
 
+import android.content.SharedPreferences;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
@@ -19,6 +21,7 @@ import android.widget.TextView;
  * create an instance of this fragment.
  */
 public class HomeFragment extends Fragment {
+    SharedPreferences sharedPreferences;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -63,20 +66,29 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+
+        //Rotate Animation for shopName
         TextView shopName = view.findViewById(R.id.shopName);
-        RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(getContext(),R.anim.anim_shop_name);
+        RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_shop_name);
 
 
         shopName.startAnimation(rotateAnimation);
 
 
+        // Scale animation for Shop image
         ImageView homeImage = view.findViewById(R.id.homeImage);
-        ScaleAnimation scaleAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(getContext(),R.anim.anim_image);
+        ScaleAnimation scaleAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_image);
 
         homeImage.startAnimation(scaleAnimation);
 
+        Animation anim_out = AnimationUtils.loadAnimation(getContext(), R.anim.anim_back_out);
+
+        view.startAnimation(anim_out);
 
 
         return view;

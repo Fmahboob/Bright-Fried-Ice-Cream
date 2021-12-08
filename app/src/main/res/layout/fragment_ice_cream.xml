@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/purple_100"
     tools:context=".RecyclerView.IceCreamFragment">
 
     <androidx.recyclerview.widget.RecyclerView

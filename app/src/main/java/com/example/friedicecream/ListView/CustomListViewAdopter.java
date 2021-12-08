@@ -19,6 +19,13 @@ public class CustomListViewAdopter extends ArrayAdapter<FAQs> {
     public CustomListViewAdopter(@NonNull Context context, ArrayList<FAQs> items) {
         super(context, 0, items);
     }
+    /**
+     * this method will place all the list items to the list view
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return view
+     */
 
     @NonNull
     @Override
@@ -42,8 +49,10 @@ public class CustomListViewAdopter extends ArrayAdapter<FAQs> {
             @Override
             public void onClick(View v) {
                 answer.setVisibility(answer.getVisibility()
-                        == View.GONE ? View.VISIBLE : View.GONE);
-                image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+                       //  == View.GONE ? View.VISIBLE : View.GONE);
+                         == View.VISIBLE ? View.GONE : View.VISIBLE);
+               // image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+
 
 
             }

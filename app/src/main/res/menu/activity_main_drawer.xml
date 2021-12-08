@@ -12,22 +12,13 @@
         <item
             android:id="@+id/nav_info_icecream"
             android:icon="@drawable/ic_baseline_icecream_24"
-            android:title="@string/menu_viewpager" />
+            android:title="@string/label_fragment_flavours" />
 
-        <item
-            android:id="@+id/nav_order"
-            android:icon="@drawable/ic_baseline_storefront_24"
-            android:title="@string/menu_order" />
+
         <item
             android:id="@+id/nav_contact_info"
             android:icon="@drawable/ic_baseline_contacts_24"
             android:title="@string/menu_contact_info" />
-        <item
-            android:id="@+id/nav_company_info"
-            android:icon="@drawable/ic_baseline_info_24"
-            android:title="@string/menu_company_info" />
-
-
 
         <item
             android:id="@+id/nav_f_a_q"
@@ -36,8 +27,10 @@
 
         <item
             android:id="@+id/nav_ice_cream"
-            android:icon="@drawable/ic_baseline_icecream_24"
-            android:title="@string/label_fragment_flavours" />
+            android:icon="@drawable/ic_baseline_lens_24"
+            android:title="@string/menu_order" />
+
+
 
 
 

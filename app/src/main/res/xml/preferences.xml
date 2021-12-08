@@ -2,17 +2,25 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="message">
-    <EditTextPreference
-        app:key="signature"
-        app:title="Hello"
-        app:useSimpleSummaryProvider="true" />
+    <SwitchPreferenceCompat
+        app:key="grid"
+        app:title="Tablet View Style"/>
+
+
     <ListPreference
-        android:defaultValue="2.99"
+        android:defaultValue="us"
         android:entries="@array/currency_menu"
         android:entryValues="@array/currency_value"
-        android:key="Currency"
-        android:summary="Please select the currency"
-        android:title="Currency Option" />
-    </PreferenceCategory>
+        android:key="currency"
+        android:summary="Please choose the currency"
+        android:title="Currency" />
+
+    <EditTextPreference
+        android:defaultValue="sett"
+        android:key="name"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference" />
+
+
 </PreferenceScreen>

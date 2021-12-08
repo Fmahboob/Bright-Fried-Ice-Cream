@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_100"
     tools:context=".HomeFragment">
 
 
@@ -15,9 +16,11 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
-        android:text="@string/shop_name"
+        android:text="@string/nav_header_title"
+        android:textAlignment="center"
         android:textColor="@color/purple_500"
-        android:textSize="35sp"
+        android:textSize="@dimen/shop_name_font"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,5 +38,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/shopName" />
+        app:layout_constraintTop_toBottomOf="@+id/shopName"
+        android:contentDescription="@string/shop_image" />
 </androidx.constraintlayout.widget.ConstraintLayout>

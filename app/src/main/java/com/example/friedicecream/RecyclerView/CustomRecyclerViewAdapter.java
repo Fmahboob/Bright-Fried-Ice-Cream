@@ -1,21 +1,28 @@
 package com.example.friedicecream.RecyclerView;
 
 
-import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.Navigation;
+
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.friedicecream.CartListView.Cart;
 import com.example.friedicecream.R;
 
 import java.util.ArrayList;
+
+/*
+@author Farina Mahboob
+ * CustomRecyclerView Adapter for hosting recycler view
+ */
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecyclerViewAdapter.CustomViewHolder> {
     private ArrayList<IceCreamItem> iceCreamItems;
@@ -40,6 +47,18 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             holder.name_iceCream.setText(iceCreamItem.getName());
             holder.price_iceCream.setText("$" + String.valueOf(iceCreamItem.getPrice()));
 
+            /*
+            Button that will add item in the cart
+             */
+
+            holder.cart_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Cart.getInstance().getCartItems().add(iceCreamItem);
+
+                }
+            });
+
     }
 
 
@@ -52,32 +71,26 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
     }
 
 
-    class CustomViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class CustomViewHolder extends RecyclerView.ViewHolder {
         protected ImageView image_iceCream;
         protected TextView name_iceCream;
         protected TextView price_iceCream;
+        protected Button cart_button;
 
 
+        /*
+        Create CustomViewHolder that will hold data on recycler View
+         */
         public CustomViewHolder(@NonNull View itemView) { //recycle_row
             super(itemView);
 
             this.image_iceCream = itemView.findViewById(R.id.iceCream_image);
             this.name_iceCream = itemView.findViewById(R.id.iceCream_name);
             this.price_iceCream = itemView.findViewById(R.id.iceCream_price);
+            this.cart_button = itemView.findViewById(R.id.addToCartButton);
 
 
         }
 
-        @Override
-        public void onClick(View view) {
-            IceCreamItem currentItem = iceCreamItems.get(getAdapterPosition());
-            Bundle bundle = new Bundle();
-            bundle.putInt("DRAWABLE", currentItem.getImage());
-            bundle.putString("NAME", currentItem.getName());
-            bundle.putString("DESCRIPTION", currentItem.getName());
-            Navigation.findNavController(view)
-                    .navigate(R.id.action_nav_ice_cream_to_iceCreamDetailed, bundle);
-
-        }
     }
 }

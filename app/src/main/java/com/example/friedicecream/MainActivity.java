@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_order, R.id.nav_contact_info, R.id.nav_company_info)
+                R.id.nav_home, R.id.nav_order, R.id.nav_contact_info)
                 .setOpenableLayout(drawer)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
@@ -73,6 +74,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_settings:
                 navController.navigate(R.id.nav_settings);
                 break;
+            case R.id.cart:
+              //  navController.navigate(R.id.cartList);
+            case R.id.credits:
+                navController.navigate(R.id.nav_credit);
+
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:background="@color/purple_100"
+    android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".ViewPager.FactFragment">
 
@@ -12,22 +17,33 @@
         android:id="@+id/titleFact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_blank_fragment"
+        android:padding="10dp"
+        android:text="@string/placeholder"
         android:textAlignment="center"
-        android:textSize="25sp"
+        android:textSize="@dimen/title_size"
+        android:textColor="@color/text_color"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageFact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/description"
+        android:padding="5dp"
+        tools:ignore="ImageContrastCheck"
         tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/descFact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textAlignment="viewStart" />
+        android:lineSpacingExtra="5sp"
+        android:padding="10dp"
+        android:text="@string/author_name"
+        android:textAlignment="viewStart"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/desc_size" />
 
 </LinearLayout>
+
+</ScrollView>

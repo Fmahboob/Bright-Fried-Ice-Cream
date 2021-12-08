@@ -4,8 +4,8 @@ import android.widget.ImageView;
 
 public class IceCreamItem {
     private int image;
-    private String name;
-    private double price;
+    public String name;
+    public double price;
 
 
     public IceCreamItem(int image, String name, double price) {
@@ -23,7 +23,7 @@ public class IceCreamItem {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -31,7 +31,7 @@ public class IceCreamItem {
     }
 
     public double getPrice() {
-        return price;
+        return this.price;
     }
 
     public void setPrice(double price) {
