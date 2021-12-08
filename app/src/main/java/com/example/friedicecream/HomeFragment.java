@@ -5,11 +5,10 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.preference.PreferenceManager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.RotateAnimation;
 import android.view.animation.ScaleAnimation;
@@ -71,7 +70,6 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
 
         //Rotate Animation for shopName
@@ -87,6 +85,10 @@ public class HomeFragment extends Fragment {
         ScaleAnimation scaleAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_image);
 
         homeImage.startAnimation(scaleAnimation);
+
+        Animation anim_out = AnimationUtils.loadAnimation(getContext(), R.anim.anim_back_out);
+
+        view.startAnimation(anim_out);
 
 
         return view;

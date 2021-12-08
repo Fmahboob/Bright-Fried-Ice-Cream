@@ -12,6 +12,8 @@ import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -169,6 +171,11 @@ public class ContactFragment extends Fragment {
 
             }
         });
+
+        Animation anim_out = AnimationUtils.loadAnimation(getContext(), R.anim.anim_out);
+
+        view.startAnimation(anim_out);
+
 
         return view;
     }
