@@ -1,9 +1,11 @@
 package com.example.friedicecream.RecyclerView;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -73,6 +75,8 @@ public class IceCreamFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+
 
         ArrayList<IceCreamItem> iceCreamItems = new ArrayList<>();
         iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 2.99));
@@ -85,8 +89,19 @@ public class IceCreamFragment extends Fragment {
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-//       recyclerView.setLayoutManager(
-//               new GridLayoutManager(getContext(), 2));
+
+        boolean grid = sharedPreferences.getBoolean("grid", false);
+
+        if(grid){
+            GridLayoutManager layoutManager = new GridLayoutManager(getContext(), 2);
+            recyclerView.setLayoutManager(layoutManager);
+        }
+        else {
+            LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+            recyclerView.setLayoutManager(layoutManager);
+        }
+
+
         recyclerView.setAdapter(new CustomRecyclerViewAdapter(iceCreamItems));
 
 
