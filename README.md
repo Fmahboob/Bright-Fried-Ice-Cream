@@ -6,7 +6,15 @@
 Shop of iceCream which will sell IceCream that has very good taste
 
 
+
+![contact1](https://user-images.githubusercontent.com/91558787/145263611-0fc5340b-6a19-42da-ae40-c8c1d0acfb86.jpg)
+
+![flavour1](https://user-images.githubusercontent.com/91558787/145263627-0d9618a7-3ea6-4631-948a-3cf13fecf178.jpg)
+
+
+
 ### Compatibility
+
 
 ##### Target SDK
 * minSDK 21
