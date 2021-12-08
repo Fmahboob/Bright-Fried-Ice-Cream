@@ -32,10 +32,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.cart.setOnClickListener(new View.OnClickListener() {
+        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.cartList);
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
             }
         });
         DrawerLayout drawer = binding.drawerLayout;
@@ -69,9 +71,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id){
-            case R.id.font_settings:
+            case R.id.action_settings:
                 navController.navigate(R.id.nav_settings);
                 break;
+            case R.id.cart:
+                navController.navigate(R.id.cartList);
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -39,11 +39,8 @@
         android:label="Ice Cream Flavours"
         tools:layout="@layout/fragment_info_icecream" /><![CDATA[
     />
+
     ]]>
-    <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.example.friedicecream.SettingsFragment"
-        android:label="fragment_seetings" />
     <fragment
         android:id="@+id/nav_cart"
         android:name="com.example.friedicecream.CartListView.CartFragment"
@@ -54,4 +51,9 @@
         android:name="com.example.friedicecream.nav_credit"
         android:label="Credit"
         tools:layout="@layout/fragment_nav_credit" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.friedicecream.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

@@ -76,15 +76,25 @@ public class IceCreamFragment extends Fragment {
                              Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.fragment_ice_cream, container, false);
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
-
-
+        String currency = sharedPreferences.getString("currency", "us");
         ArrayList<IceCreamItem> iceCreamItems = new ArrayList<>();
-        iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 2.99));
-        iceCreamItems.add(new IceCreamItem(R.drawable.kiwi, "Kiwi", 3.99));
-        iceCreamItems.add(new IceCreamItem(R.drawable.pear, "Pear", 2.99));
-        iceCreamItems.add(new IceCreamItem(R.drawable.plum, "Plum", 2.99));
-        iceCreamItems.add(new IceCreamItem(R.drawable.choclate, "Chocolate", 2.99));
-        iceCreamItems.add(new IceCreamItem(R.drawable.oreo, "Oreo", 2.99));
+        if(currency.equalsIgnoreCase("us")){
+            iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 2.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.kiwi, "Kiwi", 3.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.pear, "Pear", 2.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.plum, "Plum", 2.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.choclate, "Chocolate", 2.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.oreo, "Oreo", 2.99));
+        }
+        if(currency.equalsIgnoreCase("can")) {
+            iceCreamItems.add(new IceCreamItem(R.drawable.cherry, "Cherry", 3.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.kiwi, "Kiwi", 4.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.pear, "Pear", 3.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.plum, "Plum", 3.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.choclate, "Chocolate", 3.99));
+            iceCreamItems.add(new IceCreamItem(R.drawable.oreo, "Oreo", 3.99));
+        }
+
         RecyclerView recyclerView = view.findViewById(R.id.termRecyclerView);
 
 

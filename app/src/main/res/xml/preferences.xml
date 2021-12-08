@@ -3,16 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreferenceCompat
-        app:key="sync"
+        app:key="grid"
         app:title="Tablet View Style"/>
 
 
 
     <ListPreference
-        android:defaultValue="#00000"
-        android:entries="@array/color_menu"
-        android:entryValues="@array/color_menu"
-        android:key="Color"
-        android:summary="Please choose the color"
-        android:title="Color" />
+        android:defaultValue="us"
+        android:entries="@array/currency_menu"
+        android:entryValues="@array/currency_value"
+        android:key="currency"
+        android:summary="Please choose the currency"
+        android:title="Currency" />
 </PreferenceScreen>
