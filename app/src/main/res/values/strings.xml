@@ -29,10 +29,10 @@
     <string name="answer_one">Yes we offer lactose free alternatives. Just ask!</string>
     <string name="answer_two">There are certain flavours containing nuts while others don’t. Ice cream can be ordered without nuts if preferred.</string>
     <string name="answer_three">Deals are sometimes mailed and can be found by signing up on our app. We often offer seasonal promotions so look out for those as well,</string>
-    <string name="answer_four">Monday – Thursday: 10:00 am – 10:00 pm
+    <string name="answer_four">Monday – Thursday: 10:00 am – 10:00 pm\n
 Friday – Sunday: 10:00 am – 11:00 pm
 </string>
-    <string name="answer_five">No we do not have other location.</string>
+    <string name="answer_five">No, we do not have other location.</string>
     <string name="answer_six">While we don’t offer delivery through our app or website we are partnered with UberEATS and door dash so orders can be made through there.</string>
 
     <string name="cherry_title">Cherry Flavour</string>
@@ -143,5 +143,8 @@ Proteins: 1.2 g\n
     <string name="references_website">https://pixabay.com\n
         https://commons.wikimedia.org</string>
     <string name="add_cart_button">Add To Cart</string>
+    <string name="special_thanks">Special Thanks To</string>
+    <string name="soecial_thanks_name">Nabiha @ Zaynab</string>
+    <string name="add_to_cart"></string>>
 
 </resources>
