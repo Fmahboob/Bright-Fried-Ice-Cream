@@ -3,9 +3,10 @@
 
 ### Description
 
-Shop of iceCream which will sell IceCream that has very good taste
+Shop of iceCream which will sell IceCream that has very good taste. It has contact information by phone, text and facebbok.It has email if someone want more Information.
+Can Order online and pickup in store.
 
-
+### Images
 
 ![contact1](https://user-images.githubusercontent.com/91558787/145263611-0fc5340b-6a19-42da-ae40-c8c1d0acfb86.jpg)
 
@@ -13,6 +14,15 @@ Shop of iceCream which will sell IceCream that has very good taste
 
 
 
+
+### Applied Techniques
+
+* The application is created using navigation drawer activity.
+* FAQs list is created using ListView and card view
+* Ice Cream Price is order by Recycler View
+* Ice Cream details is created by ViewPager2
+* Can change currency and Layout in settings
+* Used Animations and transition
 ### Compatibility
 
 
