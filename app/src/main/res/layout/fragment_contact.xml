@@ -7,15 +7,14 @@
     tools:context=".ContactFragment">
 
 
-
-
     <Button
         android:id="@+id/callButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/phone"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
     <Button
         android:id="@+id/emailButton"
@@ -23,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/email_button"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
         tools:ignore="TextContrastCheck" />
     <Button
         android:id="@+id/addressButton"
@@ -31,7 +31,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/address"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
     <Button
@@ -40,9 +41,20 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/facebook"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/share_button"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
+        tools:ignore="TextContrastCheck,TextContrastCheck"/>
 
     <Button
         android:id="@+id/searchButton"
@@ -50,7 +62,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="@string/search"
-        android:textColor="#000000"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_button"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 
 

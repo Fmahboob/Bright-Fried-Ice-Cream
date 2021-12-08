@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.cart:
                 navController.navigate(R.id.cartList);
+            case R.id.credits:
+                navController.navigate(R.id.nav_credit);
+
 
         }
         return super.onOptionsItemSelected(item);

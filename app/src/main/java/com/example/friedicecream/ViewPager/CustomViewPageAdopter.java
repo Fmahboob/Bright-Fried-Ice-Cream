@@ -33,6 +33,7 @@ public class CustomViewPageAdopter extends FragmentStateAdapter {
         }
     }
 
+
     @Override
     public int getItemCount() {
         return 5;

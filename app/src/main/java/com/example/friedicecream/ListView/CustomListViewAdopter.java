@@ -42,8 +42,10 @@ public class CustomListViewAdopter extends ArrayAdapter<FAQs> {
             @Override
             public void onClick(View v) {
                 answer.setVisibility(answer.getVisibility()
-                        == View.GONE ? View.VISIBLE : View.GONE);
-                image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+                       //  == View.GONE ? View.VISIBLE : View.GONE);
+                         == View.VISIBLE ? View.GONE : View.VISIBLE);
+               // image.setVisibility(image.getVisibility() == View.GONE ? View.VISIBLE : View.GONE);
+
 
 
             }

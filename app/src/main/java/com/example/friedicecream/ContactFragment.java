@@ -2,10 +2,12 @@ package com.example.friedicecream;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -80,6 +82,8 @@ public class ContactFragment extends Fragment {
 
 
         //Email Button
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
+        String name = sharedPreferences.getString("name", "");
         Button emailButton = view.findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +92,8 @@ public class ContactFragment extends Fragment {
                 Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setData(Uri.parse("mailto:"));
                 intent.putExtra(Intent.EXTRA_EMAIL, EmailAddress);
+                intent.putExtra(Intent.EXTRA_TITLE, "Hello" + name);
+                intent.putExtra(Intent.EXTRA_TEXT, "Thanks for your Contact we will contact you shortly");
                 try{
                     startActivity(intent);
                 }catch (Exception e){
@@ -125,6 +131,24 @@ public class ContactFragment extends Fragment {
                 }catch (Exception e){
                     Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
                 }
+
+            }
+        });
+
+        Button shareButton = view.findViewById(R.id.shareButton);
+        shareButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                intent.putExtra(Intent.EXTRA_TEXT,"Want to eat delicious Fried Ice Cream");
+                try {
+                    startActivity(Intent.createChooser(intent, "Share via"));
+                }catch (Exception e){
+                    Toast.makeText(getContext(),"No Apps found",Toast.LENGTH_LONG).show();
+                }
+
 
             }
         });

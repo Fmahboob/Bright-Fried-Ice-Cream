@@ -77,6 +77,7 @@ public class InfoFragment extends Fragment {
        viewPager2 = view.findViewById(R.id.flavoursViewPager);
        viewPager2.setAdapter(new CustomViewPageAdopter(getActivity()));
 
+
         return view;
     }
 

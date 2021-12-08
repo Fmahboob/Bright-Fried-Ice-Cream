@@ -50,6 +50,7 @@
             android:layout_marginBottom="8dp"
             android:lineSpacingExtra="@dimen/fab_margin"
             android:text="TextView"
+            android:textColor="#212121"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iceCream_name"
             app:layout_constraintTop_toTopOf="parent" />
@@ -62,8 +63,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/add_to_cart"
-            android:textColor="@color/purple_100"
+            android:text="@string/add_cart_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iceCream_price"

@@ -138,13 +138,13 @@ Proteins: 1.2 g\n
     <string name="author">Author</string>
     <string name="author_name">Farina Mahboob</string>
     <string name="thanks">Thanks to</string>
-    <string name="thanks_name">Cai Filiault</string>
+    <string name="thanks_name">Nabiha and Zaynab</string>
     <string name="references">References</string>
     <string name="references_website">https://pixabay.com\n
         https://commons.wikimedia.org</string>
     <string name="add_cart_button">Add To Cart</string>
     <string name="special_thanks">Special Thanks To</string>
-    <string name="soecial_thanks_name">Nabiha @ Zaynab</string>
-    <string name="add_to_cart"></string>>
+    <string name="special_thanks_name">Cai Filiault</string>
+    <string name="share_button">Share App</string>>
 
 </resources>
