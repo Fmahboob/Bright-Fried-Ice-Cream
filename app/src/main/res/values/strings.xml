@@ -2,12 +2,154 @@
     <string name="app_name">FriedIceCream</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Bright Fried Ice Cream</string>
+    <string name="nav_header_subtitle">www.brightfriedicecream.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_flavours">Flavours</string>
+    <string name="menu_order">Order</string>
+    <string name="menu_contact_info">Contact Info</string>
+    <string name="menu_company_info">Company Info</string>
+    <string name="menu_ice_cream">Ice Cream</string>
+    <string name="menu_f_a_q">FAQs</string>
+    <string name="menu_desc">Description</string>
+    <string name="label_fragment_home">Home</string>
+    <string name="label_fragment_flavours">Flavours</string>
+
+    <string name="question_one">Do you have lactose free ice cream? </string>
+    <string name="question_two">Is your ice cream nut free? </string>
+    <string name="question_three">Do you offer deals?</string>
+    <string name="question_four">What are your store timings?</string>
+    <string name="question_five">Does your restaurant have any other locations?</string>
+    <string name="question_six">Do you do deliveries?</string>
+    <string name="answer_one">Yes we offer lactose free alternatives. Just ask!</string>
+    <string name="answer_two">There are certain flavours containing nuts while others don’t. Ice cream can be ordered without nuts if preferred.</string>
+    <string name="answer_three">Deals are sometimes mailed and can be found by signing up on our app. We often offer seasonal promotions so look out for those as well,</string>
+    <string name="answer_four">Monday – Thursday: 10:00 am – 10:00 pm\n
+Friday – Sunday: 10:00 am – 11:00 pm
+</string>
+    <string name="answer_five">No, we do not have other location.</string>
+    <string name="answer_six">While we don’t offer delivery through our app or website we are partnered with UberEATS and door dash so orders can be made through there.</string>
+
+    <string name="cherry_title">Cherry Flavour</string>
+    <string name="kiwi_title">Kiwi Flavour</string>
+    <string name="pear_title">Pear Flavour</string>
+    <string name="plum_title">Plum Flavour</string>
+    <string name="chocolate_title">Chocolate Flavour</string>
+    <string name="cookie_cream_title">Cookie and Cream</string>
+
+    <string name="cherry_desc">Vanilla cram and milk base combined with fresh locally grown cherries topped with a swirl of whipped cream.\n
+Calories per roll (28 g)\n
+Calories: 70\n
+Fat:  3.9 g\n
+Saturated Fat: 1.7 g\n
+Trans fat: 0.9 g\n
+Cholesterol: 12.4 g\n
+Sodium: 57.4 g\
+Carbohydrates: 0.4 g\
+Fiber: 0.4 g\n
+Sugar: 8 g\n
+Proteins: 1.2 g\
+</string>
+    <string name="kiwi_desc">Vanilla cream base mixed with finely cut chunks of kiwi, drizzled with a chocolate syrup topping\n
+Calories per roll (28 g)\n
+Calories: 65\n
+Fat:  3.6 g\n
+Saturated Fat: 1.5 g\n
+Trans fat: 0.7 g\n
+Cholesterol: 11.7 g\n
+Sodium: 55.4 g\n
+Carbohydrates: 0.3 g\n
+Fiber: 0.3 g\n
+Sugar: 7 g\n
+Proteins: 1.1 g\n
+</string>
+
+    <string name="pear_desc">Vanilla cream base made with finely chopped pieces of savory pears and a coconut shaving sprinkle\n
+Calories per roll (28 g)\n
+Calories: 65\n
+Fat:  3.7 g\n
+Saturated Fat: 1.5 g\
+Trans fat: 0.8 g\n
+Cholesterol: 11.7 g\n
+Sodium: 55.8 g\n
+Carbohydrates: 0.3 g\n
+Fiber: 0.3 g\n
+Sugar: 7 g\n
+Proteins: 1.1 g\n
+</string>
+    <string name="plum_desc">Vanilla Cream base with mixed with locally grown plum pieces\n
+Calories per roll (28 g)\n
+Calories: 70\n
+Fat:  3.9 g\n
+Saturated Fat: 1.7 g\n
+Trans fat: 0.9 g\n
+Cholesterol: 12.4 g\n
+Sodium: 57.4 g\n
+Carbohydrates: 0.4 g\n
+Fiber: 0.4 g\n
+Sugar: 8 g\n
+Proteins: 1.2 g\n
+</string>
+
+    <string name="chocolate_desc">Chocolate cream base with chocolate chips and topped with chocolate syrup\n
+Calories per roll (28 g)\n
+Calories: 82\n
+Fat:  4.2 g\n
+Saturated Fat: 2.4 g\n
+Trans fat: 0.9 g\n
+Cholesterol: 12.4 g\n
+Sodium: 57.4 g\n
+Carbohydrates: 0.4 g\n
+Fiber: 0.4 g\n
+Sugar: 14 g\n
+Proteins: 1.2 g\n
+</string>
+
+    <string name="cookie_cream_desc">Vanilla cream base mixed with crushed Oreos and finished with a chocolate drizzle\n
+Calories per roll (28 g)\n
+Calories: 75\n
+Fat:  4.0 g\n
+Saturated Fat: 2.1 g\n
+Trans fat: 1.1 g\n
+Cholesterol: 15.4 g\n
+Sodium: 57.4 g\n
+Carbohydrates: 0.6 g\n
+Fiber: 0.5 g\n
+Sugar: 10 g\n
+Proteins: 1.2 g\n
+</string>
+
+    <string name="phone">Phone</string>
+    <string name="email_button">Email</string>
+    <string name="address">Address</string>
+    <string name="facebook">FaceBook</string>
+    <string name="search">Search</string>
+    <string name="shop_name">Bright Fried IceCream</string>
+    <string name="menu_viewpager">viewpager</string>
+    <string name="placeholder">flavour</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_fragment_credit">Credit</string>
+    <string name="author">Author</string>
+    <string name="author_name">Farina Mahboob</string>
+    <string name="thanks">Thanks to</string>
+    <string name="thanks_name">Nabiha and Zaynab</string>
+    <string name="references">References</string>
+    <string name="references_website">https://pixabay.com\n
+        https://commons.wikimedia.org</string>
+    <string name="add_cart_button">Add To Cart</string>
+    <string name="special_thanks">Special Thanks To</string>
+    <string name="special_thanks_name">Cai Filiault</string>
+    <string name="share_button">Share App</string>
+    <string name="description">Description Of Ice Cream</string>
+    <string name="ice_cream_price">iceCream Price</string>
+    <string name="ice_cream_name">ice Cream Name</string>
+    <string name="ice_cream_image">Image of Ice cream</string>
+    <string name="shop_image">Image of  Ice Creams</string>>
+
 </resources>

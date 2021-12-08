@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="grid"
+        app:title="Tablet View Style"/>
+
+
+    <ListPreference
+        android:defaultValue="us"
+        android:entries="@array/currency_menu"
+        android:entryValues="@array/currency_value"
+        android:key="currency"
+        android:summary="Please choose the currency"
+        android:title="Currency" />
+
+    <EditTextPreference
+        android:defaultValue="sett"
+        android:key="name"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference" />
+
+
+</PreferenceScreen>
