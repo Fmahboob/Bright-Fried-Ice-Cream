@@ -1,9 +1,7 @@
 package com.example.friedicecream.RecyclerView;
 
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,14 +11,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.friedicecream.CartListView.Cart;
 import com.example.friedicecream.R;
 
 import java.util.ArrayList;
+
+/*
+@author Farina Mahboob
+ * CustomRecyclerView Adapter for hosting recycler view
+ */
 
 public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecyclerViewAdapter.CustomViewHolder> {
     private ArrayList<IceCreamItem> iceCreamItems;
@@ -45,15 +47,14 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
             holder.name_iceCream.setText(iceCreamItem.getName());
             holder.price_iceCream.setText("$" + String.valueOf(iceCreamItem.getPrice()));
 
+            /*
+            Button that will add item in the cart
+             */
+
             holder.cart_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Cart.getInstance().getCartItems().add(iceCreamItem);
-                   // Navigation.findNavController(view).navigate(R.id.cartList);
-
-
-
-
 
                 }
             });
@@ -77,6 +78,9 @@ public class CustomRecyclerViewAdapter extends RecyclerView.Adapter<CustomRecycl
         protected Button cart_button;
 
 
+        /*
+        Create CustomViewHolder that will hold data on recycler View
+         */
         public CustomViewHolder(@NonNull View itemView) { //recycle_row
             super(itemView);
 

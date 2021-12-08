@@ -1,7 +1,7 @@
 package com.example.friedicecream;
 
 import android.content.SharedPreferences;
-import android.graphics.Color;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -74,18 +74,15 @@ public class HomeFragment extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getContext());
 
 
+        //Rotate Animation for shopName
         TextView shopName = view.findViewById(R.id.shopName);
         RotateAnimation rotateAnimation = (RotateAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_shop_name);
-        String colorValue = sharedPreferences.getString("Color_menu", "#000000");
-        int color = Color.parseColor(colorValue);
-
-
-        shopName.setTextColor(color);
 
 
         shopName.startAnimation(rotateAnimation);
 
 
+        // Scale animation for Shop image
         ImageView homeImage = view.findViewById(R.id.homeImage);
         ScaleAnimation scaleAnimation = (ScaleAnimation) AnimationUtils.loadAnimation(getContext(), R.anim.anim_image);
 

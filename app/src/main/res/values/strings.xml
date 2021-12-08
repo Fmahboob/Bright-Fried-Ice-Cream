@@ -145,6 +145,11 @@ Proteins: 1.2 g\n
     <string name="add_cart_button">Add To Cart</string>
     <string name="special_thanks">Special Thanks To</string>
     <string name="special_thanks_name">Cai Filiault</string>
-    <string name="share_button">Share App</string>>
+    <string name="share_button">Share App</string>
+    <string name="description">Description Of Ice Cream</string>
+    <string name="ice_cream_price">iceCream Price</string>
+    <string name="ice_cream_name">ice Cream Name</string>
+    <string name="ice_cream_image">Image of Ice cream</string>
+    <string name="shop_image">Image of  Ice Creams</string>>
 
 </resources>

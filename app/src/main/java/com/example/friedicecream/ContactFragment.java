@@ -134,6 +134,7 @@ public class ContactFragment extends Fragment {
 
             }
         });
+        //Share Button
 
         Button shareButton = view.findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +154,7 @@ public class ContactFragment extends Fragment {
             }
         });
 
+        //Search Button
         Button searchButton = view.findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener() {
             @Override

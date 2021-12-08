@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.cart:
                 navController.navigate(R.id.cartList);
             case R.id.credits:
-                navController.navigate(R.id.nav_credit);
+                //navController.navigate(R.id.nav_credit);
 
 
         }

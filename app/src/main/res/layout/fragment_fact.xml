@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".ViewPager.FactFragment">
 
@@ -21,13 +21,16 @@
         android:text="@string/placeholder"
         android:textAlignment="center"
         android:textSize="@dimen/title_size"
+        android:textColor="@color/text_color"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imageFact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/description"
         android:padding="5dp"
+        tools:ignore="ImageContrastCheck"
         tools:src="@tools:sample/avatars" />
 
     <TextView
@@ -36,8 +39,9 @@
         android:layout_height="wrap_content"
         android:lineSpacingExtra="5sp"
         android:padding="10dp"
-        android:text="TextView"
+        android:text="@string/author_name"
         android:textAlignment="viewStart"
+        android:textColor="@color/text_color"
         android:textSize="@dimen/desc_size" />
 
 </LinearLayout>

@@ -10,4 +10,5 @@
     <dimen name="desc_size">30sp</dimen>
     <dimen name="title_size">40sp</dimen>
     <dimen name="font_button">30sp</dimen>
+    <dimen name="shop_name_font">50sp</dimen>
 </resources>

@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,13 @@ public class nav_credit extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nav_credit, container, false);
+        View view = inflater.inflate(R.layout.fragment_nav_credit, container, false);
+        Animation anim_in = AnimationUtils.loadAnimation(getContext(), R.anim.anim_in);
+        Animation anim_out = AnimationUtils.loadAnimation(getContext(), R.anim.anim_back_in);
+
+        view.startAnimation(anim_in);
+
+
+        return view;
     }
 }

@@ -70,6 +70,12 @@ public class IceCreamFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    /*
+    * IceCreams name image and price that will go to RecyclerView
+    * Change the price from us to can
+    * Change the griddle from phone view to tablet view
+
+     */
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -19,6 +19,13 @@ public class CustomListViewAdopter extends ArrayAdapter<FAQs> {
     public CustomListViewAdopter(@NonNull Context context, ArrayList<FAQs> items) {
         super(context, 0, items);
     }
+    /**
+     * this method will place all the list items to the list view
+     * @param position
+     * @param convertView
+     * @param parent
+     * @return view
+     */
 
     @NonNull
     @Override
